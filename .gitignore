@@ -1,0 +1,5 @@
+# Ignore Serverless builds
+.build/
+
+# Ignore node modules
+node_modules/

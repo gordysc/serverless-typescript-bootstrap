@@ -1,0 +1,19 @@
+service: example
+
+frameworkVersion: "2"
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  example:
+    handler: handler.health
+    events:
+      - http:
+          path: health
+          method: get
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
